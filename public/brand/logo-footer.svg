@@ -1,0 +1,19 @@
+<!-- REPLACE: real logo PNG you attached in chat — see public/brand/README.md.
+     Footer lockup adds the tagline line since there's more vertical room
+     here than in the sticky header. -->
+<svg width="230" height="84" viewBox="0 0 230 84" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Satvik Amruttulya — देश का स्वाद, देश कि चाय">
+  <g stroke="#f8f0e1" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M182 6 C190 12 176 16 184 22 C192 28 178 32 186 38" />
+  </g>
+  <path d="M168 34 L214 34 L209 56 Q191 64 173 56 Z" fill="url(#cupGradFooter)" />
+  <path d="M209 38 Q222 38 222 46 Q222 54 209 52" fill="none" stroke="#f8f0e1" stroke-width="3" />
+  <defs>
+    <linearGradient id="cupGradFooter" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e3c99a" />
+      <stop offset="100%" stop-color="#f2721c" />
+    </linearGradient>
+  </defs>
+  <text x="4" y="26" font-family="Yatra One, sans-serif" font-size="24" fill="#f2721c">सात्विक</text>
+  <text x="4" y="50" font-family="Yatra One, sans-serif" font-size="18" fill="#e3c99a">अमृततुल्य</text>
+  <text x="4" y="72" font-family="Inter, sans-serif" font-size="12" fill="#f8f0e1" opacity="0.75">देश का स्वाद, देश कि चाय</text>
+</svg>

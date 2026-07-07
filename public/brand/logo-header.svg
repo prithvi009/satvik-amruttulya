@@ -1,0 +1,19 @@
+<!-- REPLACE: real logo PNG you attached in chat — see public/brand/README.md.
+     This placeholder now mirrors the real logo's layout (सात्विक in orange,
+     अमृततुल्य in a brown/tan gradient, black cup + steam) and the color
+     tokens sampled by eye from it, but it is still a redrawn stand-in. -->
+<svg width="230" height="64" viewBox="0 0 230 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Satvik Amruttulya">
+  <g stroke="#111111" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M182 6 C190 12 176 16 184 22 C192 28 178 32 186 38" />
+  </g>
+  <path d="M168 34 L214 34 L209 56 Q191 64 173 56 Z" fill="url(#cupGrad)" />
+  <path d="M209 38 Q222 38 222 46 Q222 54 209 52" fill="none" stroke="#111111" stroke-width="3" />
+  <defs>
+    <linearGradient id="cupGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a2010" />
+      <stop offset="100%" stop-color="#e3c99a" />
+    </linearGradient>
+  </defs>
+  <text x="4" y="26" font-family="Yatra One, sans-serif" font-size="24" fill="#f2721c">सात्विक</text>
+  <text x="4" y="50" font-family="Yatra One, sans-serif" font-size="18" fill="#3a2010">अमृततुल्य</text>
+</svg>

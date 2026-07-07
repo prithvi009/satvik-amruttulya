@@ -1,0 +1,150 @@
+/* Self-hosted fonts via @fontsource (bundled at build time, font-display: swap
+   is baked into every @fontsource face). Only the weights AND subsets we
+   actually need (latin + devanagari) — the unqualified "400.css" files pull
+   in cyrillic/greek/vietnamese subsets too, which just bloats the build. */
+@import "@fontsource/yatra-one/latin-400.css"; /* display face — Devanagari + Latin in one font */
+@import "@fontsource/yatra-one/devanagari-400.css";
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-500.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/inter/latin-700.css";
+@import "@fontsource/noto-sans-devanagari/devanagari-400.css"; /* body Devanagari fallback */
+@import "@fontsource/noto-sans-devanagari/devanagari-600.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ---- BRAND TOKENS ----
+     Updated by eye against the real logo (सात्विक अमृततुल्य — orange
+     wordmark, brown/tan gradient on "अमृततुल्य" + cup, black steam/outline).
+     This build environment still can't pull the actual file down to sample
+     exact pixels (see public/brand/README.md) — once the PNG lands in
+     public/brand/, re-sample these six values precisely and swap them in. */
+  --color-ivory: #f8f0e1;         /* warm milk-ivory page background */
+  --color-ivory-dark: #efe3cc;    /* card / section-alt background   */
+  --color-decoction: #3a2010;     /* dark brown from the "अमृततुल्य" gradient, body text */
+  --color-decoction-light: #5c351b;
+  --color-kesari: #f2721c;        /* saturated orange from "सात्विक" — primary CTA */
+  --color-kesari-dark: #c85a12;   /* pressed state                       */
+  --color-kesari-light: #fbead9;  /* tint background for badges          */
+  --color-brass: #b98a4e;         /* gold-tan from the gradient highlight — accent, used sparingly */
+  --color-brass-light: #e3c99a;
+  --color-whatsapp: #25d366;      /* reserved EXCLUSIVELY for WhatsApp CTAs */
+  --color-whatsapp-dark: #1da851;
+
+  --font-display: "Yatra One", "Noto Sans Devanagari", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-devanagari: "Noto Sans Devanagari", system-ui, sans-serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-decoction);
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* thumb-reachable, obvious pressed state, min 52px tall per spec */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 52px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  transition: transform 0.08s ease, filter 0.15s ease;
+  text-align: center;
+}
+.btn:active {
+  transform: scale(0.97);
+  filter: brightness(0.92);
+}
+.btn-primary {
+  background-color: var(--color-kesari);
+  color: #201008;
+}
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+.btn-whatsapp {
+  background-color: var(--color-whatsapp);
+  color: #ffffff;
+}
+.btn-outline {
+  background-color: transparent;
+  border: 1.5px solid var(--color-brass);
+  color: var(--color-decoction);
+}
+
+.brass-rule {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-brass) 20%,
+    var(--color-brass) 80%,
+    transparent
+  );
+  opacity: 0.55;
+}
+
+/* visible keyboard focus ring everywhere, per accessibility acceptance item */
+:focus-visible {
+  outline: 3px solid var(--color-brass);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Tapri Slate chalkboard styling for the ROI calculator */
+.slate {
+  background-color: #223328;
+  background-image: radial-gradient(
+      ellipse at top left,
+      rgba(255, 255, 255, 0.04),
+      transparent 60%
+    ),
+    radial-gradient(ellipse at bottom right, rgba(255, 255, 255, 0.03), transparent 60%);
+  box-shadow: inset 0 2px 12px rgba(0, 0, 0, 0.35);
+  border: 10px solid #6b4a2a;
+  border-radius: 0.5rem;
+}
+.chalk {
+  color: #f4f1e6;
+  font-family: var(--font-display);
+  text-shadow: 0 0 1px rgba(244, 241, 230, 0.4);
+}
+.chalk-muted {
+  color: #cfd8cf;
+}

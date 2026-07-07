@@ -1,0 +1,15 @@
+[
+  { "district": "Pune", "status": "Available" },
+  { "district": "Pimpri-Chinchwad", "status": "Limited spots" },
+  { "district": "Mumbai", "status": "Coming soon" },
+  { "district": "Nashik", "status": "Coming soon" },
+  { "district": "Ahmednagar", "status": "Limited spots" },
+  { "district": "Satara", "status": "Coming soon" },
+  { "district": "Solapur", "status": "Coming soon" },
+  { "district": "Kolhapur", "status": "Coming soon" },
+  { "district": "Indore (MP)", "status": "Coming soon" },
+  { "district": "Bhopal (MP)", "status": "Coming soon" },
+  { "district": "Surat (Gujarat)", "status": "Coming soon" },
+  { "district": "Vadodara (Gujarat)", "status": "Coming soon" },
+  { "district": "Bengaluru (Karnataka)", "status": "Available" }
+]
