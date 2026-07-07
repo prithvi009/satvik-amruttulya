@@ -107,6 +107,26 @@ body {
   color: var(--color-decoction);
 }
 
+/* Infinite auto-scrolling proof strip. The track renders the photo list
+   twice; translating by -50% lands exactly on the start of the duplicate,
+   so the loop is seamless. Pauses on hover; disabled under reduced-motion
+   (the global rule above kills the animation, leaving a normal static row). */
+@keyframes proof-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: proof-marquee 40s linear infinite;
+  will-change: transform;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 /* Sticky mobile CTA bar — two equal-weight pills, solid color, icon + label.
    Deliberately not using .btn-outline here: a thin border read as weak next
    to a solid WhatsApp green, so Call now matches it with a solid fill too. */
