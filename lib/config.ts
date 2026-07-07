@@ -6,6 +6,8 @@ export const SITE = {
   name: "Satvik Amruttulya",
   url: "https://satvikamruttulya.com",
   phones: ["+919834907474", "+917823000127"],
+  // Dedicated WhatsApp number — every "WhatsApp Us" link routes here (see waLink()).
+  whatsapp: "+917823000127",
   email: "satvikamruttulya@gmail.com",
   address: {
     line1: "34/2 Buchade Patil Nagar",
@@ -49,7 +51,7 @@ export function telLink(phone: string) {
  * can see where a WhatsApp lead came from, without any chat-widget script.
  */
 export function waLink(message: string = WHATSAPP_DEFAULT_MESSAGE, phone?: string) {
-  const number = (phone ?? SITE.phones[0]).replace("+", "");
+  const number = (phone ?? SITE.whatsapp).replace("+", "");
   let finalMessage = message;
   if (typeof window !== "undefined") {
     try {
