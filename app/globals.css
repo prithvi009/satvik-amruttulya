@@ -22,8 +22,8 @@
      This build environment still can't pull the actual file down to sample
      exact pixels (see public/brand/README.md) — once the PNG lands in
      public/brand/, re-sample these six values precisely and swap them in. */
-  --color-ivory: #f8f0e1;         /* warm milk-ivory page background */
-  --color-ivory-dark: #efe3cc;    /* card / section-alt background   */
+  --color-ivory: #ffffff;         /* page background (white preview) */
+  --color-ivory-dark: #f6f2ea;    /* card / section-alt — soft warm off-white for separation on white */
   --color-decoction: #3a2010;     /* dark brown from the "अमृततुल्य" gradient, body text */
   --color-decoction-light: #5c351b;
   --color-kesari: #f2721c;        /* saturated orange from "सात्विक" — primary CTA */
