@@ -107,6 +107,37 @@ body {
   color: var(--color-decoction);
 }
 
+/* Sticky mobile CTA bar — two equal-weight pills, solid color, icon + label.
+   Deliberately not using .btn-outline here: a thin border read as weak next
+   to a solid WhatsApp green, so Call now matches it with a solid fill too. */
+.cta-pill {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 50px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: -0.01em;
+  transition: transform 0.08s ease, filter 0.15s ease, box-shadow 0.15s ease;
+}
+.cta-pill:active {
+  transform: scale(0.96);
+  filter: brightness(0.94);
+}
+.cta-pill-call {
+  background-color: var(--color-decoction);
+  color: var(--color-ivory);
+  box-shadow: 0 2px 8px -2px rgba(58, 32, 16, 0.45);
+}
+.cta-pill-whatsapp {
+  background-color: var(--color-whatsapp);
+  color: #ffffff;
+  box-shadow: 0 2px 8px -2px rgba(29, 168, 81, 0.5);
+}
+
 .brass-rule {
   height: 1px;
   width: 100%;
