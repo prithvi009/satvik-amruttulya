@@ -30,9 +30,6 @@ export default function ProofStrip() {
             className="relative flex h-52 w-40 flex-shrink-0 flex-col justify-end overflow-hidden rounded-xl border border-brass-light bg-ivory-dark"
           >
             <Image src={p.src} alt={p.caption} fill sizes="160px" className="object-cover" />
-            <figcaption className="relative z-10 bg-black/50 px-2 py-1 text-xs text-white">
-              {p.caption}
-            </figcaption>
           </figure>
         ))}
       </div>
